@@ -3,87 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        body {
-            background-color: #4071F4;
-        }
-
-        .container {
-            width: 480px;
-            height: 500px;
-            background-color: white;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 10px;
-            padding: 20px;
-            box-sizing: border-box;
-            text-align: center;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .weather-text {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .todo-text {
-            font-size: 18px;
-        }
-
-        .username {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        .logout-button {
-            background-color: #4071F4;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        .todo-enter {
-            margin-top: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .my-form input[type="text"] {
-            width: 100%;
-            padding: 10px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-
-        .add-task {
-            background-color: #4071F4;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-    </style>
+    <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
     <div class="main-container">
         <div class="container">
-            <div><span class="weather-text">Weather info</span></div>
-            <div class="to-do-list"><span class="todo-text">To-do List</span></div>
-            <div class="username">Hello, Arnat</div>
+            <div class="weather"><span class="weather-text">Weather info</span></div>
+            <div class="hello-user">Hello, Arnat</div>
             <div class="logout">
                 <form action="/logout" method="post">
                     <input class="logout-button" type="submit" name="logout" value="logout">
                 </form>
             </div>
+        </div>
+        <div class="container">
+            <div class="todo"><span class="todo-text">To-do List</span></div>
+        </div>
+        <div class="container">
             <div class="todo-enter">
                 <form action="/addtask" method="post" class="my-form">
                     <input type="text" name="task" placeholder="Enter your task" required>

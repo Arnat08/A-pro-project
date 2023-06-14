@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #4071F4;
+}
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-top: 2%;
+}
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+    width: 100%;
+}
+.weather {
+    width: 20%;
+    background: white;
+    border-radius: 10px;
+    margin-left: 2%;
+    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.weather-text {
+    color: #4071F4;
+    font-weight: bold;
+    font-size: 1.5em;
+}
+.todo {
+    display: flex;
+    margin: 0 auto;
+    height: 15vh;
+    align-items: flex-end;
+}
+.todo-text {
+    color: white;
+    font-weight: bold;
+    font-size: 6em;
+}
+.hello-user {
+    height: 4vh;
+    font-size: 1.5em;
+    color: #FFFFFF;
+    text-align: center;
+    width: 100%;
+}
+.logout {
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+.logout-button {
+    background-color: #4071F4;
+    color: white;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+.todo-enter {
+    margin: 3% auto 3% auto;
+    width: 60%;
+}
+.my-form {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+input {
+    margin: 0 auto;
+    padding: 20px;
+    font-size: 1.2em;
+    border-radius: 20px;
+    width: 75%;
+    border: none;
+}
+.add-task {
+    border-radius: 20px;
+    padding: 10px;
+    margin: 0 auto;
+    font-size: 2.2em;
+    font-weight: bold;
+    width: 15%;
+    background-color: #4071F4;
+    color: white;
+    border: none;
+}
