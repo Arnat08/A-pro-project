@@ -1,5 +1,5 @@
 from functools import wraps
-from Weather import weather
+from Weather import show_weather
 from flask import Flask, request, render_template, session, redirect, url_for
 from models import db, Users, Tasks
 from config import Configuration
@@ -9,7 +9,6 @@ import requests
 app = Flask(__name__)
 app.config.from_object(Configuration)
 db.init_app(app)
-
 
 def login_required(route):
     @wraps(route)
@@ -64,30 +63,11 @@ def register():
     return render_template('auth/register.html', title='Страница регистрации пользователя')
 
 
-# @app.route('/register', methods=['GET', 'POST'])
-# @login_not_required
-# def register():
-#     if request.method == 'GET':
-#         return render_template('auth/register.html')
-#     elif request.method == 'POST':
-#         username = request.form.get('username')
-#         email = request.form.get('email')
-#         password = request.form.get('password')
-#         confirm_password = request.form.get('confirmPassword')
-#         #print(username, email, password)
-#         user = Users(username=username, email=email, password=password)
-#         db.session.add(user)
-#         db.session.commit()
-#         session['username'] = username
-#         return redirect(url_for('login'))  # Перенаправляем на страницу входа
-#     return render_template('auth/register.html')  # Исправленный путь к шаблону
-
-
 @app.route('/task', methods=['GET'])
 def task():
-    x = weather()
+    x = show_weather()
     username = session.get('username')
-    return render_template('auth/to-do-page.html', username=username, temp=x.json['current']['temp_c'],city=x.json['location']['name'])
+    return render_template('to-do-page.html', username=username, temp=x.json['current']['temp_c'],city=x.json['location']['name'])
 
 
 # Добавил проверку логина и пароля
