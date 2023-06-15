@@ -6,7 +6,7 @@ from config import open_weather_token
 def weather():
     api_url = 'https://weatherapi-com.p.rapidapi.com/current.json'
     headers = {'X-RapidAPI-Key': 'e6219e657cmsh92edde1afaa90f1p18a47ejsn1d3554ded7f9'}
-    params = {'q': 'Almaty'}
+    params = {'q': 'Astana'}
     responce = requests.get(api_url, headers=headers, params=params)
     if responce.ok:
         weather_data = responce.json()
