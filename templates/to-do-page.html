@@ -6,78 +6,38 @@
     <link rel="stylesheet" href="/static/css/styles.css">
 </head>
 <body>
-      <div class="main-container">
-        <div class="container">
-            <div class="weather"><span class="weather-text">City: {{city}} <br>Temperature: {{temp}} °C</br></span></div>
-            <div class="hello-user">Hello {{username}}</div>
-            <div class="logout">
-                <form action="/logout" method="post">
-                    <input class="logout-button" type="submit" name="logout" value="logout">
-                </form>
-            </div>
-        </div>
-        <div class="container">
-            <div class="todo"><span class="todo-text">To-do List</span></div>
-        </div>
-        <div class="container">
-            <div class="todo-enter">
-                <form action="/addtask" method="post" class="my-form">
-                    <input type="text" name="task" placeholder="Enter your task" required>
-                    <input class="add-task" type="submit" name="addtask" value="Add Task">
-                </form>
-            </div>
-        </div>
-        <div class="task-container">
-            <div class="task">
-                Task #1
-                <span class="comment">.</span>
-            </div>
-            <div class="done-delete">
-                <button class="done-button">Done</button>
-                <button class="delete-button">Delete</button>
-            </div>
-        </div>
-        <div class="task-container">
-            <div class="task">
-                Task #2
-                <span class="comment">Comment:.</span>
-            </div>
-            <div class="done-delete">
-                <button class="done-button">Done</button>
-                <button class="delete-button">Delete</button>
-            </div>
-        </div>
-        <div class="task-container">
-            <div class="task">
-                Task #3
-                <span class="comment">Comment: </span>
-            </div>
-            <div class="done-delete">
-                <button class="done-button">Done</button>
-                <button class="delete-button">Delete</button>
-            </div>
-        </div>
-        <div class="task-container">
-            <div class="task">
-                Task #4
-                <span class="comment">Comment: .</span>
-            </div>
-            <div class="done-delete">
-                <button class="done-button">Done</button>
-                <button class="delete-button">Delete</button>
-            </div>
-        </div>
-        <div class="task-container">
-            <div class="task">
-                Task #5
-                <span class="comment">Comment:.</span>
-            </div>
-            <div class="done-delete">
-                <button class="done-button">Done</button>
-                <button class="delete-button">Delete</button>
-            </div>
+<div class="main-container">
+    <div class="container">
+        <div class="weather"><span class="weather-text">City: {{city}} <br>Temperature: {{temp}} °C</br></span></div>
+        <div class="hello-user">Hello,   {{username}}</div>
+        <div class="logout">
+            <form action="/logout" method="post">
+                <input class="logout-button" type="submit" name="logout" value="Logout">
+            </form>
         </div>
     </div>
+    <div class="container">
+        <div class="todo"><span class="todo-text">To-do List</span></div>
+    </div>
+    <div class="container">
+        <div class="todo-enter">
+            <form action="/addtask" method="post" class="my-form">
+                <input type="text" name="task" placeholder="Enter your task" required>
+                <input class="add-task" type="submit" name="addtask" value="Add Task">
+            </form>
+        </div>
+    </div>
+    <div class="task-container">
+        <div class="task">
+            Task #1
+            <span class="comment">Comment:.</span>
+        </div>
+        <div class="done-delete">
+            <button class="done-button">Done</button>
+            <button class="delete-button">Delete</button>
+        </div>
+    </div>
+    </div>
+</div>
 </body>
 </html>
-

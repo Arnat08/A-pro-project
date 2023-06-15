@@ -1,7 +1,6 @@
 import requests
 from flask import Flask, request, render_template, session, redirect, url_for, jsonify
-from pprint import pprint
-from config import open_weather_token
+
 
 
 def show_weather():

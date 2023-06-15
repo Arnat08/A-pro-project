@@ -38,8 +38,6 @@ def login_not_required(route):
 def registration_validation(userdata):
     user = Users.query.filter_by(username=userdata['username']).first()
     email = Users.query.filter_by(email=userdata['email']).first()
-    # if userdata['password'] != user.password:
-    #     return True
     if user is not None:
         return True
     if email is not None:
